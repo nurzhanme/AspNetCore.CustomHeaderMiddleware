@@ -7,16 +7,20 @@ namespace AspNetCore.CustomHeaderMiddleware
     public class CustomHeaderMiddleware
     {
         private readonly RequestDelegate _next;
+        private readonly string _name;
+        private readonly string _value;
 
-        public CustomHeaderMiddleware(RequestDelegate next)
+        public CustomHeaderMiddleware(RequestDelegate next, string name, string value)
         {
             _next = next;
+            _name = name;
+            _value = value;
         }
 
-        public Task Invoke(HttpContext context, string key, string value)
+        public Task Invoke(HttpContext context)
         {
             
-            context.Response.Headers.Add(key, value);
+            context.Response.Headers.Add(_name, _value);
             return _next(context);
         }
     }
