@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>false</GeneratePackageOnBuild>
+    <Authors>Nurzhan</Authors>
+    <Description>Middleware component which allows using custom response header values.</Description>
+    <RepositoryUrl>https://github.com/nurzhanme/AspNetCore.CustomHeaderMiddleware</RepositoryUrl>
+    <PackageTags>asp.net core, custom, header, middleware</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="1.1.0" />
+  </ItemGroup>
+
+</Project>
